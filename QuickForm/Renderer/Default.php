@@ -26,7 +26,7 @@
 /**
  * An abstract base class for QuickForm renderers
  */
-require_once 'HTML/QuickForm/Renderer.php';
+require_once __DIR__ . '/../Renderer.php';
 
 /**
  * A concrete renderer for HTML_QuickForm, based on QuickForm 2.x built-in one
@@ -482,4 +482,4 @@ class HTML_QuickForm_Renderer_Default extends HTML_QuickForm_Renderer
         $this->_templates = array();
     } // end func clearAllTemplates
 } // end class HTML_QuickForm_Renderer_Default
-?>
+

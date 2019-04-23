@@ -24,7 +24,7 @@
 /**
  * HTML class for static data
  */
-require_once 'HTML/QuickForm/static.php';
+require_once __DIR__ . '/static.php';
 
 /**
  * A pseudo-element used for adding raw HTML to form
@@ -76,4 +76,4 @@ class HTML_QuickForm_html extends HTML_QuickForm_static
     // }}}
 
 } //end class HTML_QuickForm_html
-?>
+

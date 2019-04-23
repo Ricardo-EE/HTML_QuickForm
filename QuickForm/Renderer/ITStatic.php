@@ -25,7 +25,7 @@
 /**
  * An abstract base class for QuickForm renderers
  */
-require_once 'HTML/QuickForm/Renderer.php';
+require_once __DIR__ . '/../Renderer.php';
 
 /**
  * A static renderer for HTML_QuickForm compatible 
@@ -501,4 +501,3 @@ class HTML_QuickForm_Renderer_ITStatic extends HTML_QuickForm_Renderer
         return $ret;
     }
 } // end class HTML_QuickForm_Renderer_ITStatic
-?>

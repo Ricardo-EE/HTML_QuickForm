@@ -18,7 +18,7 @@
 //
 // $Id$
 
-require_once 'HTML/QuickForm/Renderer/Array.php';
+require_once __DIR__ . '/../Renderer/Array.php';
 
 /**
  * A concrete renderer for HTML_QuickForm, makes an array of form contents
@@ -225,4 +225,3 @@ class HTML_QuickForm_Renderer_SavantDynamic extends HTML_QuickForm_Renderer_Arra
         return $ret;
     }
 }
-?>

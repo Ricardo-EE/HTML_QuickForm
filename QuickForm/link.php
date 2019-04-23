@@ -25,7 +25,7 @@
 /**
  * HTML class for static data
  */ 
-require_once 'HTML/QuickForm/static.php';
+require_once __DIR__ . '/static.php';
 
 /**
  * HTML class for a link type field
@@ -197,4 +197,4 @@ class HTML_QuickForm_link extends HTML_QuickForm_static
     // }}}
 
 } //end class HTML_QuickForm_textarea
-?>
+

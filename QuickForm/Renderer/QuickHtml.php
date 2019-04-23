@@ -24,7 +24,7 @@
 /**
  * A concrete renderer for HTML_QuickForm, based on QuickForm 2.x built-in one
  */ 
-require_once 'HTML/QuickForm/Renderer/Default.php';
+require_once __DIR__ . '/../Renderer/Default.php';
 
 /**
  * A renderer that makes it quick and easy to create customized forms.
@@ -210,4 +210,4 @@ class HTML_QuickForm_Renderer_QuickHtml extends HTML_QuickForm_Renderer_Default 
 
     // }}}
 } // end class HTML_QuickForm_Renderer_QuickHtml
-?>
+

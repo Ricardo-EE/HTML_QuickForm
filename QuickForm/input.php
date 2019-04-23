@@ -25,7 +25,7 @@
 /**
  * Base class for form elements
  */ 
-require_once 'HTML/QuickForm/element.php';
+require_once __DIR__ . '/element.php';
 
 /**
  * Base class for <input /> form elements
@@ -206,4 +206,4 @@ class HTML_QuickForm_input extends HTML_QuickForm_element
     
     // }}}
 } // end class HTML_QuickForm_element
-?>
+

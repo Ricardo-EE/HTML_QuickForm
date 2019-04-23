@@ -24,7 +24,7 @@
 /**
  * Abstract base class for QuickForm validation rules 
  */
-require_once 'HTML/QuickForm/Rule.php';
+require_once __DIR__ . '/../Rule.php';
 
 /**
  * Validates values using regular expressions
@@ -97,11 +97,10 @@ class HTML_QuickForm_Rule_Regex extends HTML_QuickForm_Rule
         // bug #12376, converting unicode escapes and stripping 'u' modifier
         if ($pos = strpos($regex, 'u', strrpos($regex, '/'))) {
             $regex = substr($regex, 0, $pos) . substr($regex, $pos + 1);
-            $regex = preg_replace('/(?<!\\\\)(?>\\\\\\\\)*\\\\x{([a-fA-F0-9]+)}/', '\\u$1', $regex);
+            $regex = preg_replace('/(?<!\\\\)(\\\\\\\\)*\\\\x{([a-fA-F0-9]+)}/', '\\u$1', $regex);
         }
 
         return array("  var regex = " . $regex . ";\n", "{jsVar} != '' && !regex.test({jsVar})");
     } // end func getValidationScript
 
 } // end class HTML_QuickForm_Rule_Regex
-?>

@@ -26,7 +26,7 @@
 /**
  * Base class for form elements
  */ 
-require_once 'HTML/QuickForm/element.php';
+require_once __DIR__ . '/element.php';
 
 /**
  * Class to dynamically create an HTML SELECT
@@ -611,4 +611,4 @@ class HTML_QuickForm_select extends HTML_QuickForm_element {
 
     // }}}
 } //end class HTML_QuickForm_select
-?>
+

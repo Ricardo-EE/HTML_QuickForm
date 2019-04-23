@@ -27,7 +27,7 @@
 /**
  * A concrete renderer for HTML_QuickForm, makes an array of form contents
  */ 
-require_once 'HTML/QuickForm/Renderer/Array.php';
+require_once __DIR__ . '/../Renderer/Array.php';
 
 /**
  * A static renderer for HTML_QuickForm, makes an array of form content
@@ -400,4 +400,3 @@ class HTML_QuickForm_Renderer_ArraySmarty extends HTML_QuickForm_Renderer_Array
         $this->_error = $template;
     } // end func setErrorTemplate
 }
-?>

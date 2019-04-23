@@ -24,7 +24,7 @@
 /**
  * HTML class for a text field
  */
-require_once 'HTML/QuickForm/text.php';
+require_once __DIR__ . '/text.php';
 
 /**
  * HTML class for an autocomplete element
@@ -255,4 +255,4 @@ EOS;
 
     // }}}
 } // end class HTML_QuickForm_autocomplete
-?>
+

@@ -24,7 +24,7 @@
 /**
  * Abstract base class for QuickForm validation rules 
  */
-require_once 'HTML/QuickForm/Rule.php';
+require_once __DIR__ . '/../Rule.php';
 
 /**
  * Rule to compare two form fields
@@ -102,4 +102,4 @@ class HTML_QuickForm_Rule_Compare extends HTML_QuickForm_Rule
         return array('', "'' != {jsVar}[0] && {$check}");
     }
 }
-?>
+

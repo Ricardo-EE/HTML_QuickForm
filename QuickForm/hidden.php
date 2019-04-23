@@ -25,7 +25,7 @@
 /**
  * Base class for <input /> form elements
  */
-require_once 'HTML/QuickForm/input.php';
+require_once __DIR__ . '/input.php';
 
 /**
  * HTML class for a hidden type element
@@ -93,4 +93,4 @@ class HTML_QuickForm_hidden extends HTML_QuickForm_input
     // }}}
 
 } //end class HTML_QuickForm_hidden
-?>
+

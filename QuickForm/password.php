@@ -25,7 +25,7 @@
 /**
  * Base class for <input /> form elements
  */
-require_once 'HTML/QuickForm/input.php';
+require_once __DIR__ . '/input.php';
 
 /**
  * HTML class for a password type field
@@ -112,4 +112,4 @@ class HTML_QuickForm_password extends HTML_QuickForm_input
     // }}}
 
 } //end class HTML_QuickForm_password
-?>
+

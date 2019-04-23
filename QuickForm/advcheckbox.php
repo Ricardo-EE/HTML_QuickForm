@@ -25,7 +25,7 @@
 /**
  * HTML class for a checkbox type field
  */
-require_once 'HTML/QuickForm/checkbox.php';
+require_once __DIR__ . '/checkbox.php';
 
 /**
  * HTML class for an advanced checkbox type field
@@ -283,4 +283,4 @@ class HTML_QuickForm_advcheckbox extends HTML_QuickForm_checkbox
     }
     // }}}
 } //end class HTML_QuickForm_advcheckbox
-?>
+

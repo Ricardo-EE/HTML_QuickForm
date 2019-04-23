@@ -24,7 +24,7 @@
 /**
  * An abstract base class for QuickForm renderers
  */
-require_once 'HTML/QuickForm/Renderer.php';
+require_once __DIR__ . '/../Renderer.php';
 
 /**
  * A concrete renderer for HTML_QuickForm, using Integrated Templates.
@@ -297,4 +297,4 @@ class HTML_QuickForm_Renderer_ITDynamic extends HTML_QuickForm_Renderer
         $this->_headerBlock = $blockName;
     }
 }
-?>
+

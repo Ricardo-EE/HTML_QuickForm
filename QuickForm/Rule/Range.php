@@ -24,7 +24,7 @@
 /**
  * Abstract base class for QuickForm validation rules 
  */
-require_once 'HTML/QuickForm/Rule.php';
+require_once __DIR__ . '/../Rule.php';
 
 /**
  * Checks that the length of value is within range
@@ -72,4 +72,4 @@ class HTML_QuickForm_Rule_Range extends HTML_QuickForm_Rule
     } // end func getValidationScript
 
 } // end class HTML_QuickForm_Rule_Range
-?>
+

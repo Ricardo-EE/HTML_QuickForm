@@ -30,11 +30,11 @@ require_once 'PEAR.php';
 /**
  * Base class for all HTML classes
  */
-require_once 'HTML/Common.php';
+require_once __DIR__ . '/Common.php';
 /**
  * Static utility methods
  */
-require_once 'HTML/QuickForm/utils.php';
+require_once __DIR__ . '/QuickForm/utils.php';
 
 /**
  * Element types known to HTML_QuickForm
@@ -44,29 +44,29 @@ require_once 'HTML/QuickForm/utils.php';
  */
 $GLOBALS['HTML_QUICKFORM_ELEMENT_TYPES'] =
         array(
-            'group'         =>array('HTML/QuickForm/group.php','HTML_QuickForm_group'),
-            'hidden'        =>array('HTML/QuickForm/hidden.php','HTML_QuickForm_hidden'),
-            'reset'         =>array('HTML/QuickForm/reset.php','HTML_QuickForm_reset'),
-            'checkbox'      =>array('HTML/QuickForm/checkbox.php','HTML_QuickForm_checkbox'),
-            'file'          =>array('HTML/QuickForm/file.php','HTML_QuickForm_file'),
-            'image'         =>array('HTML/QuickForm/image.php','HTML_QuickForm_image'),
-            'password'      =>array('HTML/QuickForm/password.php','HTML_QuickForm_password'),
-            'radio'         =>array('HTML/QuickForm/radio.php','HTML_QuickForm_radio'),
-            'button'        =>array('HTML/QuickForm/button.php','HTML_QuickForm_button'),
-            'submit'        =>array('HTML/QuickForm/submit.php','HTML_QuickForm_submit'),
-            'select'        =>array('HTML/QuickForm/select.php','HTML_QuickForm_select'),
-            'hiddenselect'  =>array('HTML/QuickForm/hiddenselect.php','HTML_QuickForm_hiddenselect'),
-            'text'          =>array('HTML/QuickForm/text.php','HTML_QuickForm_text'),
-            'textarea'      =>array('HTML/QuickForm/textarea.php','HTML_QuickForm_textarea'),
-            'link'          =>array('HTML/QuickForm/link.php','HTML_QuickForm_link'),
-            'advcheckbox'   =>array('HTML/QuickForm/advcheckbox.php','HTML_QuickForm_advcheckbox'),
-            'date'          =>array('HTML/QuickForm/date.php','HTML_QuickForm_date'),
-            'static'        =>array('HTML/QuickForm/static.php','HTML_QuickForm_static'),
-            'header'        =>array('HTML/QuickForm/header.php', 'HTML_QuickForm_header'),
-            'html'          =>array('HTML/QuickForm/html.php', 'HTML_QuickForm_html'),
-            'hierselect'    =>array('HTML/QuickForm/hierselect.php', 'HTML_QuickForm_hierselect'),
-            'autocomplete'  =>array('HTML/QuickForm/autocomplete.php', 'HTML_QuickForm_autocomplete'),
-            'xbutton'       =>array('HTML/QuickForm/xbutton.php','HTML_QuickForm_xbutton')
+            'group'         =>array(__DIR__ . '/QuickForm/group.php','HTML_QuickForm_group'),
+            'hidden'        =>array(__DIR__ . '/QuickForm/hidden.php','HTML_QuickForm_hidden'),
+            'reset'         =>array(__DIR__ . '/QuickForm/reset.php','HTML_QuickForm_reset'),
+            'checkbox'      =>array(__DIR__ . '/QuickForm/checkbox.php','HTML_QuickForm_checkbox'),
+            'file'          =>array(__DIR__ . '/QuickForm/file.php','HTML_QuickForm_file'),
+            'image'         =>array(__DIR__ . '/QuickForm/image.php','HTML_QuickForm_image'),
+            'password'      =>array(__DIR__ . '/QuickForm/password.php','HTML_QuickForm_password'),
+            'radio'         =>array(__DIR__ . '/QuickForm/radio.php','HTML_QuickForm_radio'),
+            'button'        =>array(__DIR__ . '/QuickForm/button.php','HTML_QuickForm_button'),
+            'submit'        =>array(__DIR__ . '/QuickForm/submit.php','HTML_QuickForm_submit'),
+            'select'        =>array(__DIR__ . '/QuickForm/select.php','HTML_QuickForm_select'),
+            'hiddenselect'  =>array(__DIR__ . '/QuickForm/hiddenselect.php','HTML_QuickForm_hiddenselect'),
+            'text'          =>array(__DIR__ . '/QuickForm/text.php','HTML_QuickForm_text'),
+            'textarea'      =>array(__DIR__ . '/QuickForm/textarea.php','HTML_QuickForm_textarea'),
+            'link'          =>array(__DIR__ . '/QuickForm/link.php','HTML_QuickForm_link'),
+            'advcheckbox'   =>array(__DIR__ . '/QuickForm/advcheckbox.php','HTML_QuickForm_advcheckbox'),
+            'date'          =>array(__DIR__ . '/QuickForm/date.php','HTML_QuickForm_date'),
+            'static'        =>array(__DIR__ . '/QuickForm/static.php','HTML_QuickForm_static'),
+            'header'        =>array(__DIR__ . '/QuickForm/header.php', 'HTML_QuickForm_header'),
+            'html'          =>array(__DIR__ . '/QuickForm/html.php', 'HTML_QuickForm_html'),
+            'hierselect'    =>array(__DIR__ . '/QuickForm/hierselect.php', 'HTML_QuickForm_hierselect'),
+            'autocomplete'  =>array(__DIR__ . '/QuickForm/autocomplete.php', 'HTML_QuickForm_autocomplete'),
+            'xbutton'       =>array(__DIR__ . '/QuickForm/xbutton.php','HTML_QuickForm_xbutton')
         );
 
 /**
@@ -76,19 +76,19 @@ $GLOBALS['HTML_QUICKFORM_ELEMENT_TYPES'] =
  * @global array $GLOBALS['_HTML_QuickForm_registered_rules']
  */
 $GLOBALS['_HTML_QuickForm_registered_rules'] = array(
-    'required'      => array('html_quickform_rule_required', 'HTML/QuickForm/Rule/Required.php'),
-    'maxlength'     => array('html_quickform_rule_range',    'HTML/QuickForm/Rule/Range.php'),
-    'minlength'     => array('html_quickform_rule_range',    'HTML/QuickForm/Rule/Range.php'),
-    'rangelength'   => array('html_quickform_rule_range',    'HTML/QuickForm/Rule/Range.php'),
-    'email'         => array('html_quickform_rule_email',    'HTML/QuickForm/Rule/Email.php'),
-    'regex'         => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'lettersonly'   => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'alphanumeric'  => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'numeric'       => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'nopunctuation' => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'nonzero'       => array('html_quickform_rule_regex',    'HTML/QuickForm/Rule/Regex.php'),
-    'callback'      => array('html_quickform_rule_callback', 'HTML/QuickForm/Rule/Callback.php'),
-    'compare'       => array('html_quickform_rule_compare',  'HTML/QuickForm/Rule/Compare.php')
+    'required'      => array('html_quickform_rule_required', __DIR__ . '/QuickForm/Rule/Required.php'),
+    'maxlength'     => array('html_quickform_rule_range',    __DIR__ . '/QuickForm/Rule/Range.php'),
+    'minlength'     => array('html_quickform_rule_range',    __DIR__ . '/QuickForm/Rule/Range.php'),
+    'rangelength'   => array('html_quickform_rule_range',    __DIR__ . '/QuickForm/Rule/Range.php'),
+    'email'         => array('html_quickform_rule_email',    __DIR__ . '/QuickForm/Rule/Email.php'),
+    'regex'         => array('html_quickform_rule_regex',    __DIR__ . '/QuickForm/Rule/Regex.php'),
+    'lettersonly'   => array('html_quickform_rule_regex',    __DIR__ . '/QuickForm/Rule/Regex.php'),
+    'alphanumeric'  => array('html_quickform_rule_regex',    __DIR__ . '/QuickForm/Rule/Regex.php'),
+    'numeric'       => array('html_quickform_rule_regex',    __DIR__ . '/QuickForm/Rule/Regex.php'),
+    'nopunctuation' => array('html_quickform_rule_regex',    __DIR__ . '/QuickForm/Rule/Regex.php'),
+    'nonzero'       => array('html_quickform_rule_regex',    __DIR__ . '/QuickForm/Rule/Regex.php'),
+    'callback'      => array('html_quickform_rule_callback', __DIR__ . '/QuickForm/Rule/Callback.php'),
+    'compare'       => array('html_quickform_rule_compare',  __DIR__ . '/QuickForm/Rule/Compare.php')
 );
 
 // {{{ error codes
@@ -382,7 +382,7 @@ class HTML_QuickForm extends HTML_Common
      */
     function registerRule($ruleName, $type, $data1, $data2 = null)
     {
-        include_once('HTML/QuickForm/RuleRegistry.php');
+        include_once(__DIR__ . '/QuickForm/RuleRegistry.php');
         $registry =& HTML_QuickForm_RuleRegistry::singleton();
         $registry->registerRule($ruleName, $type, $data1, $data2);
     } // end func registerRule
@@ -1384,7 +1384,7 @@ class HTML_QuickForm extends HTML_Common
             return false;
         }
         // automatically register the rule if requested
-        include_once 'HTML/QuickForm/RuleRegistry.php';
+        include_once __DIR__ . '/QuickForm/RuleRegistry.php';
         $ruleName = false;
         if (is_object($name) && is_a($name, 'html_quickform_rule')) {
             $ruleName = !empty($name->name)? $name->name: strtolower(get_class($name));
@@ -1522,7 +1522,7 @@ class HTML_QuickForm extends HTML_Common
             return false;
         }
 
-        include_once('HTML/QuickForm/RuleRegistry.php');
+        include_once(__DIR__ . '/QuickForm/RuleRegistry.php');
         $registry =& HTML_QuickForm_RuleRegistry::singleton();
 
         foreach ($this->_rules as $target => $rules) {
@@ -1711,7 +1711,7 @@ class HTML_QuickForm extends HTML_Common
     function &defaultRenderer()
     {
         if (!isset($GLOBALS['_HTML_QuickForm_default_renderer'])) {
-            include_once('HTML/QuickForm/Renderer/Default.php');
+            include_once(__DIR__ . '/QuickForm/Renderer/Default.php');
             $GLOBALS['_HTML_QuickForm_default_renderer'] =& new HTML_QuickForm_Renderer_Default();
         }
         return $GLOBALS['_HTML_QuickForm_default_renderer'];
@@ -1756,7 +1756,7 @@ class HTML_QuickForm extends HTML_Common
             return '';
         }
 
-        include_once('HTML/QuickForm/RuleRegistry.php');
+        include_once(__DIR__ . '/QuickForm/RuleRegistry.php');
         $registry =& HTML_QuickForm_RuleRegistry::singleton();
         $test = array();
         $js_escape = array(
@@ -1868,7 +1868,7 @@ class HTML_QuickForm extends HTML_Common
      */
     function toArray($collectHidden = false)
     {
-        include_once 'HTML/QuickForm/Renderer/Array.php';
+        include_once __DIR__ . '/QuickForm/Renderer/Array.php';
         $renderer =& new HTML_QuickForm_Renderer_Array($collectHidden);
         $this->accept($renderer);
         return $renderer->toArray();
@@ -2070,4 +2070,3 @@ class HTML_QuickForm_Error extends PEAR_Error {
 
     // }}}
 } // end class HTML_QuickForm_Error
-?>

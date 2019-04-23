@@ -24,7 +24,7 @@
 /**
  * An abstract base class for QuickForm renderers
  */
-require_once 'HTML/QuickForm/Renderer.php';
+require_once __DIR__ . '/../Renderer.php';
 
 /**
  * A concrete renderer for HTML_QuickForm, makes an object from form contents
@@ -458,4 +458,4 @@ class QuickformElement
         return $ret;
     }
 } // end class QuickformElement
-?>
+

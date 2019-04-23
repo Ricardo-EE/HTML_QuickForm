@@ -24,7 +24,7 @@
 /**
  * Base class for form elements
  */ 
-require_once 'HTML/QuickForm/element.php';
+require_once __DIR__ . '/element.php';
 
 /**
  * Class for HTML 4.0 <button> element
@@ -150,4 +150,4 @@ class HTML_QuickForm_xbutton extends HTML_QuickForm_element
         }
     }
 }
-?>
+

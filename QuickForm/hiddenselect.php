@@ -24,7 +24,7 @@
 /**
  * Class for <select></select> elements
  */
-require_once 'HTML/QuickForm/select.php';
+require_once __DIR__ . '/select.php';
 
 /**
  * Hidden select pseudo-element
@@ -119,4 +119,4 @@ class HTML_QuickForm_hiddenselect extends HTML_QuickForm_select
 
     // }}}
 } //end class HTML_QuickForm_hiddenselect
-?>
+

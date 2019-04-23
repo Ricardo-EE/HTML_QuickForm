@@ -30,7 +30,7 @@ require_once 'HTML/Common.php';
 /**
  * Static utility methods
  */
-require_once 'HTML/QuickForm/utils.php';
+require_once __DIR__ . '/utils.php';
 
 /**
  * Base class for form elements
@@ -498,4 +498,3 @@ class HTML_QuickForm_element extends HTML_Common
 
     // }}}
 } // end class HTML_QuickForm_element
-?>
