@@ -30,7 +30,7 @@ require_once 'PEAR.php';
 /**
  * Base class for all HTML classes
  */
-require_once 'HTML/Common.php';
+require_once __DIR__ . '/../html_common/Common.php';
 /**
  * Static utility methods
  */
