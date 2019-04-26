@@ -61,9 +61,15 @@ Features:
   <email>ron@humaniq.com</email>
   <active>no</active>
  </developer>
- <date>2018-07-20</date>
+ <developer>
+  <name>Kevin Smith</name>
+  <user>ricardoee</user>
+  <email>kevin.smith@ricardo.com</email>
+  <active>yes</active>
+ </developer>
+ <date>2019-04-26</date>
  <version>
-  <release>3.2.16</release>
+  <release>3.2.20</release>
   <api>3.2.6</api>
  </version>
  <stability>
@@ -72,7 +78,7 @@ Features:
  </stability>
  <license uri="http://www.php.net/license">PHP License</license>
  <notes>
- * revert [] array syntax
+ * Update require_once to relative links so we are using other composer dependencies and not PEAR dependencies, if they are not installed
  </notes>
  <contents>
   <dir name="/" baseinstalldir="HTML">
@@ -269,6 +275,22 @@ Features:
  </dependencies>
  <phprelease />
  <changelog>
+
+ <release>
+  <date>2019-04-26</date>
+  <version>
+   <release>3.2.20</release>
+   <api>3.2.6</api>
+  </version>
+  <stability>
+   <release>stable</release>
+   <api>stable</api>
+  </stability>
+  <license uri="http://www.php.net/license">PHP License</license>
+  <notes>
+ * Update require_once to relative links so we are using other composer dependencies and not PEAR dependencies, if they are not installed
+  </notes>
+ </release>
 
  <release>
   <date>2018-07-20</date>
